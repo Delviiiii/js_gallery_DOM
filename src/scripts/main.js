@@ -10,5 +10,9 @@ list.addEventListener('click', (info) => {
   const link = info.target.closest('a');
   const ref = link.getAttribute('href');
 
+  if (!link) {
+    return;
+  }
+
   mainCanvaBlock.querySelector('img').setAttribute('src', ref);
 });
